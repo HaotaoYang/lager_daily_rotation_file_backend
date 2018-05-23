@@ -6,6 +6,10 @@ new_lager
 Examplle
 -----
 
+    1. configurate on your rebar.config file:
+    {parse_transform, lager_transform}
+
+    2. configurate on your sys.config file:
 	[
 		{lager, [
 				{colored, true},
