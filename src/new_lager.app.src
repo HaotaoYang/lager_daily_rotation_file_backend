@@ -1,6 +1,6 @@
 {application, new_lager,
  [{description, "An OTP application"},
-  {vsn, "0.1.0"},
+  {vsn, "1.0.0"},
   {registered, []},
   {mod, {new_lager_app, []}},
   {applications,
