@@ -146,7 +146,7 @@ handle_info(rotate_date, #state{fd = FD, name = File, rotator = Rotator, sync_in
     NewState = case Rotator:create_logfile(NewFile, {SyncSize, SyncInterval}) of
         {ok, {NewFD, Inode, _}} ->
             close_file(FD),
-            State#state{fd = NewFD, inode = Inode, cur_num = undefined};
+            State#state{fd = NewFD, name = NewFile, inode = Inode, cur_num = undefined};
         {error, Reason} ->
             ?INT_LOG(error, "Failed to open log file ~s with error ~s", [NewFile, file:format_error(Reason)]),
             State#state{flap = true}
