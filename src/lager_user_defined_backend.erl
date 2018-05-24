@@ -70,7 +70,7 @@ init(LogFileConfig) when is_list(LogFileConfig) ->
             {Y, M, D} = erlang:date(),
             FormatDate = lists:flatten(io_lib:format("~4..0w~2..0w~2..0w", [Y, M, D])),
             Name = LogPath ++ "log_" ++ FormatDate ++ ".log",
-            % schedule_rotation_timer(),
+            schedule_rotation_timer(),
             Shaper = lager_util:maybe_flush(Flush, #lager_shaper{hwm = HighWaterMark, flush_threshold = FlushThr, id = Name}),
             State0 = #state{
                 name = Name, level = Level, size = Size, rotator = Rotator, shaper = Shaper,
