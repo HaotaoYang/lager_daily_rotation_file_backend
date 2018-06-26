@@ -1,17 +1,15 @@
-{application, new_lager,
- [{description, "An OTP application"},
-  {vsn, "1.0.0"},
-  {registered, []},
-  {mod, {new_lager_app, []}},
-  {applications,
-   [kernel,
-    stdlib,
-    lager
-   ]},
-  {env,[]},
-  {modules, []},
-
-  {maintainers, []},
-  {licenses, ["Apache 2.0"]},
-  {links, []}
- ]}.
+{application, new_lager, [
+    {vsn, "1.0.0"},
+    {description, "new lager"},
+    {registered, []},
+    {applications, [
+        kernel,
+        stdlib,
+        lager
+    ]},
+    {env,[]},
+    {modules, []},
+    {maintainers, []},
+    {licenses, []},
+    {links, []}
+]}.
