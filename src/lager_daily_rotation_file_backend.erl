@@ -4,7 +4,7 @@
 %%% @end
 %%%-------------------------------------------------------------------
 
--module(lager_user_defined_backend).
+-module(lager_daily_rotation_file_backend).
 
 -include_lib("lager/include/lager.hrl").
 
