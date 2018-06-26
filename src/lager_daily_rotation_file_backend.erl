@@ -115,7 +115,7 @@ handle_call(_Request, State) ->
 
 %% @private
 handle_event({log, Message}, #state{name = Name, level = L, shaper = Shaper, formatter = Formatter, formatter_config = FormatConfig} = State) ->
-    case lager_util:is_loggable(Message, L, {lager_user_defined_backend, Name}) of
+    case lager_util:is_loggable(Message, L, {lager_daily_rotation_file_backend, Name}) of
         true ->
             case lager_util:check_hwm(Shaper) of
                 {true, Drop, #lager_shaper{hwm = Hwm} = NewShaper} ->
