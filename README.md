@@ -1,4 +1,4 @@
-new_lager
+lager_daily_rotation_file_backend
 =====
 
     It provides an user-defined handler to rotate the log files everyday base on the lager project.
