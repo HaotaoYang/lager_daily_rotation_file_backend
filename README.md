@@ -46,3 +46,14 @@ Examplle
 			]}
 		]}
 	].
+
+    3. add lager_daily_rotation_file_backend to your xxx.app.src file:
+    {applications, [
+        kernel,
+        stdlib,
+        sasl,
+        ssl,
+        crypto,
+        parse_trans,
+        lager_daily_rotation_file_backend
+    ]}
