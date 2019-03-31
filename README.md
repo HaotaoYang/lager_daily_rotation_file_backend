@@ -6,10 +6,10 @@ lager_daily_rotation_file_backend
 Examplle
 -----
 
-    1. configurate on your rebar.config file:
+    1. configurate in rebar.config file:
     {parse_transform, lager_transform}
 
-    2. configurate on your sys.config file:
+    2. configurate in sys.config file:
 	[
 		{lager, [
 				{colored, true},
@@ -17,7 +17,7 @@ Examplle
 				{crash_log_msg_size, 65536},
 				{crash_log_size, 10485760},
 				{crash_log_date, "$D0"},
-				{crash_log_count, 10},
+				{crash_log_count, 5},
 				{handlers, [
 				{lager_console_backend, [
 					{level, debug},
@@ -47,7 +47,7 @@ Examplle
 		]}
 	].
 
-    3. add lager_daily_rotation_file_backend to your xxx.app.src file:
+    3. add lager_daily_rotation_file_backend to xxx.app.src file:
     {applications, [
         kernel,
         stdlib,
