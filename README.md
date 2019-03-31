@@ -57,3 +57,6 @@ Examplle
         parse_trans,
         lager_daily_rotation_file_backend
     ]}
+
+    4. include lib_hrl file:
+    -include_lib("lager_daily_rotation_file_backend/include/log.hrl").
